@@ -73,8 +73,4 @@ docker-compose up -d
 ```
 
 ---
-<<<<<<< HEAD
 *Architected with precision and passion.*
-=======
-*Built with ❤️ by an awesome team of 3 named as tyagi,guptaa,sakkk 🔥*
->>>>>>> 47fcf0c256e66c9bf15931acf87f6a4dfcb48fa5
