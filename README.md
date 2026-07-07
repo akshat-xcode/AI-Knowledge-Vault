@@ -59,4 +59,4 @@ docker-compose up -d
 - Do not modify another team member's folder without permission.
 
 ---
-*Built with ❤️ by an awesome team of 3.*
+*Built with ❤️ by an awesome team of 3 named as tyagi,guptaa,sakkk 🔥*
