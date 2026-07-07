@@ -1,76 +1,62 @@
 # 🧠 AI-Knowledge-Vault
 
-> **An intelligent, hyper-personalized AI learning assistant that transforms static documents into interactive knowledge bases.**
+Welcome to the **AI-Knowledge-Vault**! This project is a next-generation AI-powered learning assistant designed to help you interact with your documents, generate flashcards, take quizzes, and retrieve information seamlessly.
 
-Welcome to **AI-Knowledge-Vault**. This repository houses the core architecture for a next-generation AI platform designed to seamlessly ingest documents, generate automated flashcards and quizzes, and provide context-aware answers using advanced Retrieval-Augmented Generation (RAG).
+## 🚀 Features (MVP Phase)
+- **Document Ingestion:** Upload PDFs and extract text efficiently.
+- **Smart AI Chat (RAG):** Ask questions directly to your documents. The AI searches via vector embeddings and provides accurate answers with source citations.
+- **AI Learning Tools:** Automatically generate flashcards and quizzes from your notes.
+- **Premium UI/UX:** A fast, responsive, and visually stunning frontend built with Next.js and Vanilla CSS (Dark Mode & Glassmorphism).
+- **Scalable Architecture:** Containerized with Docker, backed by PostgreSQL and `pgvector`.
 
----
+## 🛠️ Tech Stack
+- **Frontend:** Next.js (App Router), React, TypeScript, Vanilla CSS
+- **Backend:** Python, FastAPI, LangChain / LlamaIndex
+- **Database:** PostgreSQL with `pgvector` (for vector embeddings and auth)
+- **Infrastructure:** Docker & Docker Compose
 
-## 🎯 Project Vision & MVP Scope
-The primary objective of the MVP is to establish a robust, high-performance foundation capable of processing PDFs and delivering accurate, cited answers at lightning speed.
+## 📂 Repository Structure
+Since we are a collaborative team, the repository is split into independent folders to prevent merge conflicts:
 
-- **Intelligent Ingestion:** Rapid PDF parsing and text extraction.
-- **Vector Search & RAG:** High-dimensional semantic search using embedded knowledge graphs.
-- **Cognitive Tools:** Automated flashcard generation and quiz evaluations.
-- **Aesthetic Excellence:** A highly responsive, glassmorphism-inspired UI designed for deep focus.
-- **Containerized Infrastructure:** Seamless deployment using Docker and PostgreSQL.
+```text
+AI-Knowledge-Vault/
+│
+├── frontend/      # Next.js App (UI & UX)
+├── backend/       # FastAPI Server (Logic & APIs)
+├── ai/            # Python scripts for LLM testing, PDF Parsing & Embeddings
+├── docker/        # Dockerfiles and infrastructure configs
+└── docs/          # Architecture diagrams and API documentation
+```
 
----
+## 💻 Getting Started (Team Guide)
+Clone this repository and navigate to your respective folder.
 
-## 👥 Team Architecture & Role Split
-
-This project is built using a highly decoupled micro-architecture, maintained by a specialized team of 3 developers. The work is explicitly split as follows:
-
-### 🎨 1. Frontend Engineering (UI/UX)
-**Tech Stack:** Next.js (App Router), React, TypeScript, Vanilla CSS
-**Responsibilities:**
-- Designing a premium, Dark Mode + Glassmorphism user interface.
-- Managing client-side state, API integrations, and routing.
-- Ensuring a fluid, micro-animated user experience.
-*Directory:* `/frontend`
-
-### ⚙️ 2. Backend Engineering (Core API)
-**Tech Stack:** Python, FastAPI, JWT Auth
-**Responsibilities:**
-- Building highly concurrent, asynchronous REST APIs.
-- Managing User Authentication, session states, and Conversation History.
-- Orchestrating the data flow between the client and the AI models.
-*Directory:* `/backend`
-
-### 🤖 3. AI/ML & Infrastructure (Data Pipeline)
-**Tech Stack:** LangChain, LlamaIndex, PostgreSQL (`pgvector`), Docker
-**Responsibilities:**
-- Implementing the RAG pipeline (Chunking, Embeddings, Vector Search).
-- Writing scripts for deep PDF parsing and prompt engineering.
-- Managing the database infrastructure and Docker containerization.
-*Directories:* `/ai`, `/docker`
-
----
-
-## 🚀 Getting Started (Local Development)
-
-To avoid merge conflicts and preserve the micro-architecture, **only run the setup for your assigned role.**
-
-### Frontend Node Setup
+### 1. Frontend Setup
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
+Access the UI at `http://localhost:3000`.
 
-### Backend API Setup
+### 2. Backend Setup
 ```bash
 cd backend
 python -m venv venv
-# Activate venv (source venv/bin/activate OR venv\Scripts\activate)
+# activate venv (source venv/bin/activate OR venv\Scripts\activate)
 pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
-### Database & AI Infrastructure
+### 3. AI & ML Infrastructure
 ```bash
 docker-compose up -d
 ```
 
+## 🤝 Collaboration Rules
+- Always work **strictly inside your assigned folder** (`frontend/`, `backend/`, or `ai/`).
+- Commit and push your code at the end of every day.
+- Do not modify another team member's folder without permission.
+
 ---
-*Architected with precision and passion.*
+*Built with ❤️ by an awesome team of 3.*
